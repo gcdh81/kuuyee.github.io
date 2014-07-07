@@ -1,0 +1,378 @@
+---
+layout: post
+title: "Oracle Database 11g Certified Master Exam"
+description: "OCM认证"
+category: 
+tags: [OCM认证之旅,ocm,ocp,ocm]
+---
+{% include JB/setup %}
+
+### 认证步骤
+
+1. Oracle Database 11g: Administration I | [1Z0-052](http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-052)
+2. Oracle Database 11g: Administration II | [1Z0-053](http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:1Z0-053)
+3. Oracle Database 11g Certified Master Exam | [11GOCM](http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=5001&get_params=p_exam_id:11GOCM)
+
+---
+
+## 1Z0-052考试大纲
+
+**Exploring the Oracle Database Architecture**
+
+  * Explain the Memory Structures
+  * Describe the Process Structures 
+  * Overview of Storage Structures
+
+**Preparing the Database Environment**
+
+  * Identify the tools for Administering an Oracle Database
+  * Plan an Oracle Database installation 
+  * Install the Oracle software by using Oracle Universal Installer (OUI)
+
+**Creating an Oracle Database**
+
+  * Create a database by using the Database Configuration Assistant (DBCA)
+
+**Managing the Oracle Instance**
+
+  * Setting database initialization parameters
+  * Describe the stages of database startup and shutdown 
+  * Using alert log and trace files 
+  * Using data dictionary and dynamic performance views
+
+**Configuring the Oracle Network Environment**
+
+  * Configure and Manage the Oracle Network
+  * Using the Oracle Shared Server architecture
+
+**Managing Database Storage Structures**
+
+  * Overview of tablespace and datafiles
+  * Create and manage tablespaces 
+  * Space management in tablespaces
+
+**Administering User Security**
+
+  * Create and manage database user accounts
+  * Grant and revoke privileges 
+  * Create and manage roles 
+  * Create and manage profiles  
+
+**Managing Data and Concurrency**
+
+  * Monitor and resolve locking conflicts
+
+**Managing Undo Data**
+
+  * Overview of Undo
+  * Transactions and undo data 
+  * Managing undo
+
+**Implementing Oracle Database Security**
+
+  * Database Security and Principle of Least Privilege
+  * Work with Standard Database Auditing
+
+**Database Maintenance**
+
+  * Use and manage optimizer statistics
+  * Use and manage Automatic Workload Repository (AWR) 
+  * Use advisory framework 
+  * Manage Alerts and Thresholds
+
+**Performance Management**
+
+  * Use Automatic Memory Management
+  * Use Memory Advisors 
+  * Troubleshoot invalid and unusable objects
+
+**Intelligent Infrastructure Enhancements**
+
+  * Use the Enterprise Manager Support Workbench
+  * Managing Patches  
+
+**Backup and Recovery Concepts**
+
+  * Identify the types of failure that can occur in an Oracle database
+  * Describe ways to tune instance recovery 
+  * Identify the importance of checkpoints, redo log files, and archived log files 
+  * Overview of flash recovery area 
+  * Configure ARCHIVELOG mode
+
+**Performing Database Backups**
+
+  * Create consistent database backups
+  * Back up your database without shutting it down 
+  * Create incremental backups 
+  * Automate database backups 
+  * Manage backups, view backup reports and monitor the flash recovery area
+
+**Performing Database Recovery**
+
+  * Overview of Data Recovery Advisor
+  * Use Data Recovery Advisor to Perform recovery (Control file, Redo log file and Data file)
+
+**Moving Data**
+
+  * Describe and use methods to move data (Directory objects, SQL*Loader, External Tables)
+  * Explain the general architecture of Oracle Data Pump 
+  * Use Data Pump Export and Import to move data between Oracle databases
+
+---
+
+## 1Z0-053考试大纲
+
+**Database Architecture and ASM**
+
+  * Describe Automatic Storage Management (ASM)
+  * Set up initialization parameter files for ASM and database instances 
+  * Start up and shut down ASM instances 
+  * Administer ASM disk groups
+
+**Configuring for Recoverability**
+
+  * Configure multiple archive log file destinations to increase availability
+  * Define, apply and use a retention policy 
+  * Configure the Flash Recovery Area 
+  * Use Flash Recovery Area
+
+**Using the RMAN Recovery Catalog**
+
+  * Identify situations that require RMAN recovery catalog
+  * Create and configure a recovery catalog 
+  * Synchronize the recovery catalog  
+  * Create and Use RMAN stored scripts 
+  * Back up the recovery catalog 
+  * Create and use a virtual private catalog
+
+**Configuring Backup Specifications**
+
+  * Configure backup settings
+  * Allocate channels to use in backing up  
+  * Configure backup optimization 
+
+**Using RMAN to Create Backups**
+
+  * Create image file backups
+  * Create a whole database backup  
+  * Enable fast incremental backup  
+  * Create duplex backup and back up backup sets 
+  * Create an archival backup for long-term retention  
+  * Create a multisection, compressed and encrypted backup  
+  * Report on and maintain backups 
+
+**Performing User-Managed Backup and Recovery**
+
+  * Recover from a lost TEMP file
+  * Recover from a lost redo log group  
+  * Recover from the loss of password file  
+  * Perform user-managed complete database recovery 
+  * Perform user-managed incomplete database recovery  
+  * Perform user-managed and server managed backups  
+  * Identify the need of backup mode  
+  * Back up and recover a control file 
+
+**Using RMAN to Perform Recovery**
+
+  * Perform complete recovery from a critical or noncritical data file loss using RMAN
+  * Perform incomplete recovery using RMAN  
+  * Recover using incrementally updated backups  
+  * Switch to image copies for fast recovery 
+  * Restore a database onto a new host  
+  * Recover using a backup control file  
+  * Perform Disaster recovery 
+
+**Using RMAN to Duplicate a Database**
+
+  * Creating a duplicate database
+  * Using a duplicate database 
+
+**Performing Tablespace Point-in-Time Recovery**
+
+  * Identify the situations that require TSPITR 
+  * Perform automated TSPITR
+
+**Monitoring and Tuning RMAN**
+
+  * Monitoring RMAN sessions and jobs
+  * Tuning RMAN 
+  * Configure RMAN for Asynchronous I/O
+
+**Using Flashback Technology**
+
+  * Restore dropped tables from the recycle bin
+  * Perform Flashback Query 
+  * Use Flashback Transaction
+
+**Additional Flashback Operations**
+
+  * Perform Flashback Table operations
+  * Configure, Monitor Flashback Database and Perform Flashback Database operations 
+  * Set up and use a Flashback Data Archive 
+
+**Diagnosing the Database**
+
+  * Set up Automatic Diagnostic Repository
+  * Using Support Workbench  
+  * Perform Block Media Recovery 
+
+**Managing Memory**
+
+  * Implement Automatic Memory Management
+  * Manually configure SGA parameters  
+  * Configure automatic PGA memory management 
+
+**Managing Database Performance**
+
+  * Use the SQL Tuning Advisor
+  * Use the SQL Access Advisor to tune a workload  
+  * Understand Database Replay 
+
+**Space Management**
+
+  * Manage resumable space allocation
+  * Describe the concepts of transportable tablespaces and databases  
+  * Reclaim wasted space from tables and indexes by using the segment shrink functionality 
+
+**Managing Resources**
+
+  * Understand the database resource manager
+  * Create and use Database Resource Manager Components
+
+**Automating Tasks with the Scheduler**
+
+  * Create a job, program, and schedule
+  * Use a time-based or event-based schedule for executing Scheduler jobs 
+  * Create lightweight jobs 
+  * Use job chains to perform a series of related tasks 
+
+**Administering the Scheduler**
+
+  * Create Windows and Job Classes
+  * Use advanced Scheduler concepts to prioritize jobs
+
+---
+
+## OCM认证大纲
+
+**Server Configuration**
+
+  * Create the database
+  * Determine and set sizing parameters for database structures
+  * Create and manage temporary, permanent, and undo tablespaces
+  * Stripe data files across multiple physical devices and locations
+  * Configure the database environment to support optimal data access performance
+  * Create and manage database configuration files
+  * Create and manage bigfile tablespaces
+  * Create and Manage a tablespace that uses NFS mounted file system file  
+  * Create and manage multiple network configuration files
+  * Create and configure a listener
+  * Configure the database instance to support shared server connections
+  * Set up network tracing
+  * Manage Oracle network processes  
+  * Configure the network environment to allow connections to multiple databases
+  * Use configurationless connections
+  * Use OPatch to install a patch
+  * Use Grid Infrastructure to manage oracle databases and other resources
+  * Use Enterprise Manager Configuration Assistant(EMCA) utility
+
+**Enterprise Manager Grid Control**
+
+  * Install and Patch Enterprise Manager Grid Control software
+  * Configure the Enterprise Manager repository
+  * Create Enterprise Manager Grid Control users
+  * Use Enterprise Manager to modify a database configuration
+  * Configure Enterprise Manager to modify database availability
+  * Create and manage jobs
+  * Create and monitor alerts
+  * Create notifications
+  * Implement Grid Control and Database Control
+  * Choose the appropriate tablespace type for the intended use
+  * Create Scheduler jobs
+  * Create schedules
+  * Assign jobs to windows
+  * Create programs
+  * Create job classes
+  * Install the Enterprise Manager Grid Control infrastructure
+  * Deploy Enterprise Manager Grid Control agents
+  * Configure Grid Control for business requirements
+
+**Managing Database Availability**
+
+  * Mantain recovery catalogs
+  * Configure Recovery Manager
+  * Use Recovery Manager to perform database backups
+  * Use Recover Manager to perform complete database restore and recovery operations
+  * Configure RMAN
+  * Create different types of RMAN backups to cater for different performance and retention requirements
+  * Set Flashback Database parameters
+  * Configure a Fast Recovery Area
+  * Perform various recovery operations using Flashback technology
+
+**Data Management**
+
+  * Manage Materialized Views to improve rewrite and refresh performance
+  * Configure and manage distributed materialized views
+  * Create and Manage encrypted tablespaces
+  * Manage Transport of tablespaces across platforms
+  * Configure a schema to support a star transformation query
+  * Administer external tables
+  * Implement Data Pump export and import jobs for data transfer
+  * Implement Data Pump to and from remote databases  
+  * Configure and use parallel execution for queries
+  * Use SQL*Loader
+  * Administer, manage and tune parallel execution
+
+**Data Warehouse Management**
+
+  * Administer partitioned tables and indexes using appropriate methods and keys 
+  * Perform partition maintenance operations  
+  * Maintain indexes on a partitioned table
+  * Implement securefile LOB
+  * Create and manage LOB segments  
+  * Implement fine-grained access control  
+  * Create and manage contexts
+  * Administer flashback data archive and schema evolution
+
+**Performance Management**  
+
+  * Administer Resource Manager 
+  * Use Result Cache 
+  * Use multi column statistics 
+  * Gather statistics on a specific table without invalidating cursors 
+  * Use partitioned indexes 
+  * Administer and tune schema object to support various access methods 
+  * Interpret execution plan  
+  * Use SQL tuning tools and features 
+  * Use SQL Tuning Advisor 
+  * Use SQL Access Advisor 
+  * Use SQL Performance Analyzer
+  * Configure baseline templates  
+  * Use SQL Plan Management feature
+  * Implement instance caging 
+
+**Grid Infrastructure and ASM**
+
+  * Install Oracle Grid Infrastructure 
+  * Create ASM Disk Groups 
+  * Create and manage as ASM instance
+  * Implement ASM failure groups
+  * Creating ACFS File System   
+  * Start, stop, configure and administer Oracle Grid Infrastructure
+
+**Real Application Clusters**  
+
+  * Install the Oracle Database 11gR2 software
+  * Configure ASM for the shared disks and create a clustered database   
+  * Configure archiving  
+  * Configure services using both Manual and Policy Managed methods 
+
+**Data Guard** 
+
+  * Create Physical Standby Database with real-time apply. 
+  * Configure the data guard environment to reduce overheads of fast incremental backups on the primary database 
+  * Configure the Observer 
+  * Switchover and switch back  
+  * Configure connect time failover
+  * Convert the standby to a snapshot standby 
+  * Configure archivelog deletion policy for the Dataguard configuration
