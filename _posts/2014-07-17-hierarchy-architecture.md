@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "IT Hierarchy Architecture(摘录)"
+title: "IT System Architecture(摘录)"
 description: "IT规划中的技术体系架构"
 category: 
 tags: [Architecture]
 ---
 {% include JB/setup %}
 
-### IT规划中的技术体系架构   
+## IT规划中的技术体系架构   
 体系架构通常会建立一个共有的远景，然而，简单的设定远景是远远不够的，必须和构建人员、客户、其他相关人员进行沟通以达成共识，在构建过程中要维护该体系架构。它在一个横跨于客户需求、构建人员的要求以及客观世界约束的沟壑之间架构了一座桥梁。   
 
 **什么是体系架构？**   
