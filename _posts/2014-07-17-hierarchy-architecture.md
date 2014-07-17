@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IT Hierarchy Architecture"
+title: "IT Hierarchy Architecture(摘录)"
 description: "IT规划中的技术体系架构"
 category: 
 tags: [Architecture]
