@@ -15,17 +15,17 @@ tags: [Linux,YUM]
 
 Oracle Linux 7
 
-```
-# cd /etc/yum.repos.d
-# wget http://public-yum.oracle.com/public-yum-ol7.repo
-```
+
+          # cd /etc/yum.repos.d
+          # wget http://public-yum.oracle.com/public-yum-ol7.repo
+
 
 Oracle Linux 6
 
-```
-# cd /etc/yum.repos.d
-# wget http://public-yum.oracle.com/public-yum-ol6.repo
-```
+
+          # cd /etc/yum.repos.d
+          # wget http://public-yum.oracle.com/public-yum-ol6.repo
+
 
 Oracle Linux 5
 
