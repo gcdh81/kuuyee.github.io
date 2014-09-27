@@ -41,17 +41,17 @@ virtrulbox在linux下需要配置
 创建vagrant 用户
 
 
-        # Add vagrant user
-        /usr/sbin/groupadd vagrant
-        /usr/sbin/useradd vagrant -g vagrant -G wheel
-        echo "vagrant"|passwd --stdin vagrant
-        echo "vagrant        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers.d/vagrant
-        chmod 0440 /etc/sudoers.d/vagrant
+    # Add vagrant user
+    /usr/sbin/groupadd vagrant
+    /usr/sbin/useradd vagrant -g vagrant -G wheel
+    echo "vagrant"|passwd --stdin vagrant
+    echo "vagrant        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers.d/vagrant
+    chmod 0440 /etc/sudoers.d/vagrant
 
 ### 验证安装
 
 
-        su - vagrant
-        vagrant -v
-        Vagrant 1.6.3
+    su - vagrant
+    vagrant -v
+    Vagrant 1.6.3
 
