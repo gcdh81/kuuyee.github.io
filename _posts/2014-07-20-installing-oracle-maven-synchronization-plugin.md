@@ -15,7 +15,7 @@ tags: [CI,ORACLE,Maven]
 
 编辑`~/.bashrc`，加入如下变量
 
-```bash
+```
 export JAVA_HOME=/home/oracle/jdk1.7.0_55
 export ORACLE_HOME=/opt/oracle/middleware12c
 export M2_HOME=$ORACLE_HOME/oracle_common/modules/org.apache.maven_3.0.5
@@ -33,17 +33,16 @@ source ~/.bashrc
 
 deploy到Archiva资源库中
 
-```
 
+```
 cd $ORACLE_HOME/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.1.3
-mvn deploy:deploy-file -DpomFile=oracle-maven-sync-12.1.3.pom -Dfile=oracle-maven-sync-12.1.3.jar       
+mvn deploy:deploy-file -DpomFile=oracle-maven-sync-12.1.3.pom -Dfile=oracle-maven-sync-12.1.3.jar
 -Durl=http://192.168.0.117:8080/repository/internal -DrepositoryId=internal
-  
 ```
 
 也可以install到本地
 
-```bash
+```
 cd $ORACLE_HOME/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.1.3
 mvn install:install-file -DpomFile=oracle-maven-sync.12.1.3.pom -Dfile=oracle-maven-sync.12.1.3.jar
 ```
