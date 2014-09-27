@@ -16,11 +16,11 @@ tags: [CI,ORACLE,Maven]
 编辑`~/.bashrc`，加入如下变量
 
 
-  export JAVA_HOME=/home/oracle/jdk1.7.0_55
-  export ORACLE_HOME=/opt/oracle/middleware12c
-  export M2_HOME=$ORACLE_HOME/oracle_common/modules/org.apache.maven_3.0.5
-  export ANT_HOME=/ciroot/apache-ant-1.8.4
-  export PATH=$ANT_HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$PATH
+        export JAVA_HOME=/home/oracle/jdk1.7.0_55
+        export ORACLE_HOME=/opt/oracle/middleware12c
+        export M2_HOME=$ORACLE_HOME/oracle_common/modules/org.apache.maven_3.0.5
+        export ANT_HOME=/ciroot/apache-ant-1.8.4
+        export PATH=$ANT_HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$PATH
 
 
 让变量生效
