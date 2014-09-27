@@ -11,11 +11,17 @@ tags: [VM,Docker]
 官方推荐ubuntu安装docker，用惯了centos，所以选择在centos上安装。如果是centos6需要安装epel源，如果是centos7可以直接`yum install docker`,我的是centos6,安装过程如下
 
 
-        cd /etc/yum.repos.d/
-        sudo wget -c "http://mirrors.sohu.com/fedora-epel/6Server/x86_64/epel-release-6-8.noarch.rpm"
-        sudo rpm -ivh epel-release-6-8.noarch.rpm 
-        sudo yum install docker-io
+    cd /etc/yum.repos.d/
+    sudo wget -c "http://mirrors.sohu.com/fedora-epel/6Server/x86_64/epel-release-6-8.noarch.rpm"
+    sudo rpm -ivh epel-release-6-8.noarch.rpm 
+    sudo yum install docker-io
 
+如果使用docker报`dial unix /var/run/docker.sock: no such file or directory`的错误，可能是由于Docker守护程序没在运行。检查Docker守护程序的状态，确保先启动它。
+
+
+    sudo service docker start
+    Starting cgconfig service:                                 [  OK  ]
+    Starting docker:                                           [  OK  ]
 
 ### 创建镜像
 可以Docker Hub获取已有镜像并更新，也可以利用本地文件系统创建一个。
