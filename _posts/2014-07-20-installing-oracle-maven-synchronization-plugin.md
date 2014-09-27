@@ -25,11 +25,13 @@ tags: [CI,ORACLE,Maven]
 
 让变量生效
 
+
         source ~/.bashrc
 
 **2.安装同步插件**
 
 deploy到Archiva资源库中
+
 
         cd $ORACLE_HOME/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.1.3
         mvn deploy:deploy-file -DpomFile=oracle-maven-sync-12.1.3.pom -Dfile=oracle-maven-sync-12.1.3.jar
@@ -161,6 +163,7 @@ deploy到Archiva资源库中
 
 
 **3.执行同步**
+
 
         mvn com.oracle.maven:oracle-maven-sync:12.1.3-0-0:push -DoracleHome=/opt/oracle/middleware12c -DserverId=internal
 
