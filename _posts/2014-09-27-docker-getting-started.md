@@ -31,11 +31,6 @@ tags: [VM,Docker]
 
     $ sudo docker run -t -i learn/tutorial /bin/bash
 
-由于国内网络的问题，你懂得!很多时候从Docker Hub获取会失败。因此需要在本地磁盘上创建。
-
-本地创建也分为两种方式，一种是全新创建，这种相对比较麻烦，另一种比较方便，就是下载openvz模板，然后从本地导入。
-
-
 如果你遇到如下的权限问题：
 
 
@@ -46,6 +41,10 @@ tags: [VM,Docker]
 
     $ sudo chmod a+rw /var/run/docker.sock
     $ soudo service docker restart
+
+由于国内网络的问题，你懂得!很多时候从Docker Hub获取会失败。因此需要在本地磁盘上创建。
+
+本地创建也分为两种方式，一种是全新创建，这种相对比较麻烦，另一种比较方便，就是下载openvz模板，然后从本地导入。
 
 #### 本地导入openvm模板
 
@@ -95,7 +94,7 @@ tags: [VM,Docker]
 
 然后退出。
 
-#### 提交修改过的镜像容器
+### 提交修改过的镜像容器
 前面我们已经在centos容器上做了改动，安装了一个git软件，我需要把做过的操作保存起来，这对自动化部署和运维非常有意义。命令如下：
 
 
