@@ -11,15 +11,15 @@ tags: [VM,Docker]
 官方推荐ubuntu安装docker，用惯了centos，所以选择在centos上安装。如果是centos6需要安装epel源，如果是centos7可以直接`yum install docker`,我的是centos6,安装过程如下
 
 
-    cd /etc/yum.repos.d/
-    sudo wget -c "http://mirrors.sohu.com/fedora-epel/6Server/x86_64/epel-release-6-8.noarch.rpm"
-    sudo rpm -ivh epel-release-6-8.noarch.rpm 
-    sudo yum install docker-io
+    $ cd /etc/yum.repos.d/
+    $ sudo wget -c "http://mirrors.sohu.com/fedora-epel/6Server/x86_64/epel-release-6-8.noarch.rpm"
+    $ sudo rpm -ivh epel-release-6-8.noarch.rpm 
+    $ sudo yum install docker-io
 
 如果使用docker报`dial unix /var/run/docker.sock: no such file or directory`的错误，可能是由于Docker守护程序没在运行。检查Docker守护程序的状态，确保先启动它。
 
 
-    sudo service docker start
+    $ sudo service docker start
     Starting cgconfig service:                                 [  OK  ]
     Starting docker:                                           [  OK  ]
 
@@ -29,7 +29,7 @@ tags: [VM,Docker]
 从Docker Hub上获取
 
 
-    sudo docker run -t -i learn/tutorial /bin/bash
+    $ sudo docker run -t -i learn/tutorial /bin/bash
 
 由于国内网络的问题，你懂得!很多时候从Docker Hub获取会失败。因此需要在本地磁盘上创建。
 
@@ -41,17 +41,18 @@ tags: [VM,Docker]
 
     dial unix /var/run/docker.sock: permission denied
 
-可以使用下面的命令修改权限
+可以使用下面的命令修改权限并重启docker服务
 
 
     $ sudo chmod a+rw /var/run/docker.sock
+    $ soudo service docker restart
 
 #### 本地导入openvm模板
 
 从[openvm](https://openvz.org/Download/template/precreated)下载镜像，比如下载一个centos-6-x86_64的镜像，然后执行如下命令导入
 
 
-    sudo cat centos-6-x86_64.tar.gz  |docker import - centos:6
+    $ sudo cat centos-6-x86_64.tar.gz  |docker import - centos:6
     155228d528ca2057ef7fe18f208b23c02adf195a5d0e03af96c4a4bb7d572349
 
 如果遇到如下的错：
@@ -69,7 +70,7 @@ tags: [VM,Docker]
 查看下导入的镜像
 
 
-    sudo docker images
+    $ sudo docker images
     REPOSITORY          TAG                 IMAGE ID            CREATED              VIRTUAL SIZE
     centos              6                   155228d528ca        About a minute ago   603 MB
 
@@ -78,7 +79,7 @@ tags: [VM,Docker]
 下面启动导入的镜像并做一些动作。首先启动：
 
 
-    sudo docker run -t -i centos:6 /bin/bash
+    $ sudo docker run -t -i centos:6 /bin/bash
     bash-4.1# 
 
 有些镜像容器登录设置成进入bash，这样的话就不显示本次操作容器的ID，切换到其它用户下就可以看到ID了。
@@ -90,7 +91,7 @@ tags: [VM,Docker]
 可以看到，`ddaa7947c3b2`就是本次操作的ID，然后我们在启动的centos容器里安装一个git软件。
 
 
-    sudo yum install git
+    $ sudo yum install git
 
 然后退出。
 
@@ -98,13 +99,13 @@ tags: [VM,Docker]
 前面我们已经在centos容器上做了改动，安装了一个git软件，我需要把做过的操作保存起来，这对自动化部署和运维非常有意义。命令如下：
 
 
-    docker commit -m "Added git yum" -a "Docker KuuYee" ddaa7947c3b2 centos:6v2
+    $ sudo docker commit -m "Added git yum" -a "Docker KuuYee" ddaa7947c3b2 centos:6v2
     901d50978d5d02d4ad59d0bbc164e352e23a64ebfa263355d9c5e3c1e18da44b
 
 再来看下docker容器列表
 
 
-    docker images
+    $ sudo docker images
     REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
     centos              6v2                 901d50978d5d        6 minutes ago       804.7 MB
     centos              6                   155228d528ca        43 minutes ago      603 MB
@@ -112,7 +113,7 @@ tags: [VM,Docker]
 可以看到多了一个`6v2`的centos容器。这就是我们保存了git安装操作的容器，下面我们登录这个容器，看看安装的git软件还在不！
 
 
-    sudo docker run -t -i centos:6v2 /bin/bash
+    $ sudo docker run -t -i centos:6v2 /bin/bash
     bash-4.1# git --version
     git version 1.7.1
 
