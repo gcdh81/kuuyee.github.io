@@ -84,8 +84,8 @@ tags: [VM,Docker]
 有些镜像容器登录设置成进入bash，这样的话就不显示本次操作容器的ID，切换到其它用户下就可以看到ID了。
 
 
-        bash-4.1# su -
-        [root@ddaa7947c3b2 ~]# 
+    bash-4.1# su -
+    [root@ddaa7947c3b2 ~]# 
 
 可以看到，`ddaa7947c3b2`就是本次操作的ID，然后我们在启动的centos容器里安装一个git软件。
 
@@ -98,22 +98,22 @@ tags: [VM,Docker]
 前面我们已经在centos容器上做了改动，安装了一个git软件，我需要把做过的操作保存起来，这对自动化部署和运维非常有意义。命令如下：
 
 
-        docker commit -m "Added git yum" -a "Docker KuuYee" ddaa7947c3b2 centos:6v2
-        901d50978d5d02d4ad59d0bbc164e352e23a64ebfa263355d9c5e3c1e18da44b
+    docker commit -m "Added git yum" -a "Docker KuuYee" ddaa7947c3b2 centos:6v2
+    901d50978d5d02d4ad59d0bbc164e352e23a64ebfa263355d9c5e3c1e18da44b
 
 再来看下docker容器列表
 
 
-        docker images
-        REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-        centos              6v2                 901d50978d5d        6 minutes ago       804.7 MB
-        centos              6                   155228d528ca        43 minutes ago      603 MB
+    docker images
+    REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+    centos              6v2                 901d50978d5d        6 minutes ago       804.7 MB
+    centos              6                   155228d528ca        43 minutes ago      603 MB
 
 可以看到多了一个`6v2`的centos容器。这就是我们保存了git安装操作的容器，下面我们登录这个容器，看看安装的git软件还在不！
 
 
-        sudo docker run -t -i centos:6v2 /bin/bash
-        bash-4.1# git --version
-        git version 1.7.1
+    sudo docker run -t -i centos:6v2 /bin/bash
+    bash-4.1# git --version
+    git version 1.7.1
 
 到此试用完毕，比起以前的虚拟机方案轻量多了，真的很棒！
