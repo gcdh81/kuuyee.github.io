@@ -34,7 +34,7 @@ tags: [VM,Docker]
 >如果你遇到如下的权限问题：
 >
 >
-> >   dial unix /var/run/docker.sock: permission denied
+>>   dial unix /var/run/docker.sock: permission denied
 >
 >
 >可以使用下面的命令修改权限并重启docker服务
@@ -56,16 +56,17 @@ tags: [VM,Docker]
     $ sudo cat centos-6-x86_64.tar.gz  |docker import - centos:6
     155228d528ca2057ef7fe18f208b23c02adf195a5d0e03af96c4a4bb7d572349
 
-如果遇到如下的错：
 
-
-    unable to remount sys readonly: unable to mount sys as readonly max retries reached
-
-碰到这个问题需要修改Docker的配置参数把/etc/sysconfig/docker文件中的other-args更改为：
-
-
-    other_args="--exec-driver=lxc --selinux-enabled"
-
+>如果遇到如下的错：
+>
+>
+>>   unable to remount sys readonly: unable to mount sys as readonly max retries reached
+>
+>碰到这个问题需要修改Docker的配置参数把/etc/sysconfig/docker文件中的other-args更改为：
+>
+>
+>>   other_args="--exec-driver=lxc --selinux-enabled"
+>
 
 
 查看下导入的镜像
