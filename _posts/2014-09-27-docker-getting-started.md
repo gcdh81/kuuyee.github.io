@@ -31,16 +31,18 @@ tags: [VM,Docker]
 
     $ sudo docker run -t -i learn/tutorial /bin/bash
 
-如果你遇到如下的权限问题：
-
-
-    dial unix /var/run/docker.sock: permission denied
-
-可以使用下面的命令修改权限并重启docker服务
-
-
-    $ sudo chmod a+rw /var/run/docker.sock
-    $ soudo service docker restart
+>如果你遇到如下的权限问题：
+>
+>
+> >   dial unix /var/run/docker.sock: permission denied
+>
+>
+>可以使用下面的命令修改权限并重启docker服务
+>
+>
+>>    $ sudo chmod a+rw /var/run/docker.sock
+>>    $ soudo service docker restart
+>
 
 由于国内网络的问题，你懂得!很多时候从Docker Hub获取会失败。因此需要在本地磁盘上创建。
 
