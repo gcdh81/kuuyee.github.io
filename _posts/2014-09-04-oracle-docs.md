@@ -7,8 +7,11 @@ tags: [ORACLE,RCU]
 ---
 {% include JB/setup %}
 
-### RCU Schema说明
+### RCU v111170
 http://docs.oracle.com/cd/E28280_01/doc.1111/e14259/rcu_schemas.htm#BCFJAGEJ
+
+### RCU v1213
+http://docs.oracle.com/middleware/1213/core/RCUUG/index.html
 
 ### OHS v1213
 http://docs.oracle.com/middleware/1213/webtier
@@ -19,5 +22,7 @@ http://docs.oracle.com/middleware/1213/soasuite/index.html
 ### WLST v1213
 http://docs.oracle.com/middleware/1213/cross/wlsttasks.htm
 
-### BIEE 111171
+### BIEE v111171
 http://docs.oracle.com/cd/E28280_01/bi.htm
+
+
