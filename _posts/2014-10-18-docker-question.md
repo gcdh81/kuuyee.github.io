@@ -14,6 +14,7 @@ tags: [docker]
 
 
 **解决办法**
+
 关闭SELinux
 
     setenforce 0
