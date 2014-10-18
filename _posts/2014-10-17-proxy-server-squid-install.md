@@ -66,3 +66,6 @@ tags: [Linux,squid]
 ### 使用代理服务
 
 假设Squid服务器的IP地址为`192.168.1.100`，那么在需要设置HTTP代理服务的地方输入`http://192.168.1.100:3128`即可。
+
+#### 参考文档
+http://linux.vbird.org/linux_server/0420squid.php
