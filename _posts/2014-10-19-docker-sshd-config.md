@@ -13,9 +13,13 @@ tags: [Docker]
     66164d40fb6fb1f862d89521baa94db6ea6e0d43ca7478748ade5440b0f91ca5
 
 参数说明
+
 `-d` : Docker 容器在后台以守护态（Daemonized）形式运行
+
 `-p` : （小写的）则可以指定要映射的端口，上面的命令绑定容器`22`端口到主机的`55522`端口。并且，在一个指定端口上只可以绑定一个容器。支持的格式有 `ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort。`
+
 `--name`: 给容器指定一个名字
+
 `-v` : 指定挂载一个本地主机的目录到容器中去，上面的命令加载主机的 `~/data` 目录到容器的 `/opt/data` 目录
 
 ### SSH客户端访问容器
