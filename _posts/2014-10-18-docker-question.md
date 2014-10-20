@@ -47,6 +47,8 @@ tags: [Docker]
 
 **解决办法**
 
+参考文档: [http://stackoverflow.com/questions/18173889/cannot-access-centos-sshd-on-docker](http://stackoverflow.com/questions/18173889/cannot-access-centos-sshd-on-docker)
+
 编辑容器的`/etc/ssh/sshd_config` 设置`UsePAM no`
 
     vim /etc/ssh/sshd_config
