@@ -66,3 +66,47 @@ tags: [Docker]
 
     service sshd restart
 
+
+### Docker容器不能修改内核参数
+错误描如下：
+
+    -bash-4.1# sysctl -p
+    error: "Read-only file system" setting key "net.ipv4.ip_forward"
+    error: "Read-only file system" setting key "net.ipv4.conf.default.rp_filter"
+    error: "Read-only file system" setting key "net.ipv4.conf.default.accept_source_route"
+    error: "Read-only file system" setting key "kernel.sysrq"
+    error: "Read-only file system" setting key "kernel.core_uses_pid"
+    error: "net.ipv4.tcp_syncookies" is an unknown key
+    error: "net.bridge.bridge-nf-call-ip6tables" is an unknown key
+    error: "net.bridge.bridge-nf-call-iptables" is an unknown key
+    error: "net.bridge.bridge-nf-call-arptables" is an unknown key
+    error: "Read-only file system" setting key "kernel.msgmnb"
+    error: "Read-only file system" setting key "kernel.msgmax"
+    error: "Read-only file system" setting key "kernel.shmmax"
+    error: "Read-only file system" setting key "kernel.shmall"
+
+**解决办法**
+
+参考文档: [http://tonybai.com/2014/10/14/discussion-on-the-approach-to-modify-system-variables-in-docker/](http://tonybai.com/2014/10/14/discussion-on-the-approach-to-modify-system-variables-in-docker/)
+
+容器启动时加入参数`--privileged`特权模式
+
+    docker run -d --privileged -p 22 kuuyee/centos6:ofm-base
+
+这样就可以配置内核参数了
+
+    -bash-4.1# echo 68719476736 > /proc/sys/kernel/shmmax
+    -bash-4.1# sysctl -p
+    net.ipv4.ip_forward = 0
+    net.ipv4.conf.default.rp_filter = 1
+    net.ipv4.conf.default.accept_source_route = 0
+    kernel.sysrq = 0
+    kernel.core_uses_pid = 1
+    error: "net.ipv4.tcp_syncookies" is an unknown key
+    error: "net.bridge.bridge-nf-call-ip6tables" is an unknown key
+    error: "net.bridge.bridge-nf-call-iptables" is an unknown key
+    error: "net.bridge.bridge-nf-call-arptables" is an unknown key
+    kernel.msgmnb = 65536
+    kernel.msgmax = 65535
+    kernel.shmmax = 68719476736 //设置成功
+    kernel.shmall = 4294967296
