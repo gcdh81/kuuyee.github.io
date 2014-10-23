@@ -49,3 +49,34 @@ tags: [ORACLE,RCU]
 
     alter system set nls_length_semantics=byte;
   
+
+
+### ORA-01450: maximum key length (6398) exceeded
+报错内容如下：
+
+    ==> testsoa: ORA-01882: timezone region not found
+    ==> testsoa: 
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:392)
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:385)
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1018)
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:501)
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:522)
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:257)
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:437)
+    ==> testsoa:    at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:954)
+    ==> testsoa:    at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:639)
+    ==> testsoa:    at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:666)
+    ==> testsoa:    at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+    ==> testsoa:    at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:566)
+    ==> testsoa:    at java.sql.DriverManager.getConnection(DriverManager.java:571)
+    ==> testsoa:    at java.sql.DriverManager.getConnection(DriverManager.java:215)
+    ==> testsoa:    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    ==> testsoa:    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+    ==> testsoa:    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    ==> testsoa:    at java.lang.reflect.Method.invoke(Method.java:606)
+    ==> testsoa: 
+    ==> testsoa: java.sql.SQLException: java.sql.SQLException: ORA-00604: error occurred at recursive SQL level 1
+
+**解决办法：**
+设置本地环境变量`export TZ=GMT;`
