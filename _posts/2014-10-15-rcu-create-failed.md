@@ -51,7 +51,7 @@ tags: [ORACLE,RCU]
   
 
 
-### ORA-01450: maximum key length (6398) exceeded
+### ORA-01882: timezone region not found
 报错内容如下：
 
     ==> testsoa: ORA-01882: timezone region not found
