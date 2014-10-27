@@ -78,5 +78,22 @@ tags: [ORACLE,RCU]
     ==> testsoa: 
     ==> testsoa: java.sql.SQLException: java.sql.SQLException: ORA-00604: error occurred at recursive SQL level 1
 
-**解决办法：**
+**解决办法1：**
 设置本地环境变量`export TZ=GMT;`
+
+**解决办法2：**
+要想从根本上解决，还是需要把环境变量搞定，执行以下操作
+
+
+    1.
+    cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+    2.
+    vi /etc/sysconfig/clock
+    ZONE=”Asia/Shanghai”
+    UTC=false
+    ARC=false
+    3.
+    date -s 10/27/2014
+    date -s 09:51:00
+    4.
+    reboot
