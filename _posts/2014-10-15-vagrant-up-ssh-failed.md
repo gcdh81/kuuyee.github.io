@@ -77,6 +77,3 @@ tags: [vm,vagrant]
 
     wcdb.ssh.username = "vagrant"
     wcdb.ssh.password = "vagrant"
-
-
-<hr class="bs-docs-separator">
