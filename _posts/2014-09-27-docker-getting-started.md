@@ -6,7 +6,7 @@ category:
 tags: [VM,Docker]
 ---
 {% include JB/setup %}
-
+ 
 ### 安装Docker
 官方推荐ubuntu安装docker，用惯了centos，所以选择在centos上安装。如果是centos6需要安装epel源，如果是centos7可以直接`yum install docker`,我的是centos6,安装过程如下
 
