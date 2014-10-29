@@ -120,3 +120,6 @@ tags: [VM,Docker]
     git version 1.7.1
 
 到此试用完毕，比起以前的虚拟机方案轻量多了，真的很棒！
+
+
+<hr class="bs-docs-separator">
