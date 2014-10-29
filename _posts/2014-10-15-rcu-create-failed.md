@@ -97,6 +97,3 @@ tags: [ORACLE,RCU]
     date -s 09:51:00
     4.
     reboot
-
-
-<hr class="bs-docs-separator">
