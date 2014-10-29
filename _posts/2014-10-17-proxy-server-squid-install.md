@@ -69,6 +69,3 @@ tags: [Linux,squid]
 
 #### 参考文档
 http://linux.vbird.org/linux_server/0420squid.php
-
-
-<hr class="bs-docs-separator">
