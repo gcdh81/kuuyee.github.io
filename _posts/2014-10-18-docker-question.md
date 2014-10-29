@@ -110,7 +110,3 @@ tags: [Docker]
     kernel.msgmax = 65535
     kernel.shmmax = 68719476736 //设置成功
     kernel.shmall = 4294967296
-
-
-
-<hr class="bs-docs-separator">
