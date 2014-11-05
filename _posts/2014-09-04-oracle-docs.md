@@ -21,6 +21,7 @@ http://docs.oracle.com/middleware/1213/soasuite/index.html
 
 ### WLST v1213
 http://docs.oracle.com/middleware/1213/cross/wlsttasks.htm
+
 http://docs.oracle.com/middleware/1213/wls/WLSTC/intro.htm#WLSTC107
 
 ### BIEE v111171
@@ -28,6 +29,7 @@ http://docs.oracle.com/cd/E28280_01/bi.htm
 
 ### ADF UI
 http://jdevadf.oracle.com/
+
 http://www.oracle.com/webfolder/ux/middleware/alta/index.html
 
 
