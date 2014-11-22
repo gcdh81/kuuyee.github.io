@@ -19,6 +19,10 @@ http://docs.oracle.com/middleware/1213/webtier
 ### SOA v1213
 http://docs.oracle.com/middleware/1213/soasuite/index.html
 
+**SOA企业级部署**
+
+https://docs.oracle.com/middleware/1213/soasuite/SOEDG/toc.htm
+
 ### WLST v1213
 http://docs.oracle.com/middleware/1213/cross/wlsttasks.htm
 
