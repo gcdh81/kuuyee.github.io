@@ -25,7 +25,10 @@ http://docs.oracle.com/middleware/1213/soasuite/index.html
 
 **SOA企业级部署**
 
+https://docs.oracle.com/middleware/1213/core/ASHIA/toc.htm
+
 https://docs.oracle.com/middleware/1213/soasuite/SOEDG/toc.htm
+
 
 ### WLST v1213
 http://docs.oracle.com/middleware/1213/cross/wlsttasks.htm
@@ -49,6 +52,10 @@ http://docs.oracle.com/cd/E28280_01/bi.htm
 http://jdevadf.oracle.com/
 
 http://www.oracle.com/webfolder/ux/middleware/alta/index.html
+
+#### IDM11122
+
+http://docs.oracle.com/cd/E40329_01/index.htm
 
 
 
