@@ -33,6 +33,8 @@ https://docs.oracle.com/middleware/1213/soasuite/SOEDG/toc.htm
 ### WLST v1213
 http://docs.oracle.com/middleware/1213/cross/wlsttasks.htm
 
+https://docs.oracle.com/middleware/1213/wls/WLSTG/toc.htm
+
 **Domain模板**
 
 https://docs.oracle.com/middleware/1213/wls/WLDTR/toc.htm
