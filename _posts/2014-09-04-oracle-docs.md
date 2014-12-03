@@ -20,6 +20,12 @@ http://docs.oracle.com/middleware/1213/core/RCUUG/index.html
 ### OHS v1213
 http://docs.oracle.com/middleware/1213/webtier
 
+### WLS
+
+**应部署**
+
+https://docs.oracle.com/middleware/1213/wls/DEPGD/toc.htm
+
 ### SOA v1213
 http://docs.oracle.com/middleware/1213/soasuite/index.html
 
