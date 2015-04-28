@@ -110,3 +110,22 @@ tags: [Docker]
     kernel.msgmax = 65535
     kernel.shmmax = 68719476736 //设置成功
     kernel.shmall = 4294967296
+
+
+### Docker Registry Push 报错
+错误描如下：
+
+    FATA[0002] Error: Invalid registry endpoint https://0.0.0.0:5000/v1/: Get https://0.0.0.0:5000/v1/_ping: EOF. If      this private registry supports only HTTP or HTTPS with an unknown CA certificate, please add `--insecure-registry     0.0.0.0:5000` to the daemon's arguments. In the case of HTTPS, if you have access to the registry's CA        
+    certificate, no need for the flag; simply place the CA certificate at /etc/docker/certs.d/0.0.0.0:5000/ca.crt 
+
+**解决办法**
+修改Docker配置文件
+
+    vim /etc/default/docker
+
+增加以下一行
+
+    DOCKER_OPTS="$DOCKER_OPTS --insecure-registry=104.131.173.242:5000"
+
+重启Docker
+sudo service docker restart
